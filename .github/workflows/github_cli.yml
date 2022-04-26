@@ -38,4 +38,4 @@ jobs:
       - run: gh repo list
 
       # PR
-      - run: gh pr list --state open --label "リリース" --json url
+      - run: gh pr list --state open --label "リリース" --json url | jq -r '.[0].url'
