@@ -39,6 +39,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # PR
-      - run: gh pr list
+      - run: gh pr list --state open --label "リリース"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
