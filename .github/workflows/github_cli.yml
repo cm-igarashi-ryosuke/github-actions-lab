@@ -32,3 +32,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      # リポジトリ
+      - run: gh repo list
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
